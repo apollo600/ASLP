@@ -1,0 +1,3 @@
+模型导出代码在/home/disk1/zhzhang/HolidayWork/nnet/android.py
+导出后把model.pt放到安卓工程里app/src/main/assets路径下即可。
+安卓工程直接用Android studio导入，会自动下载sdk和相关的包，等全部下载完手机打开usb调试，就可以安装了

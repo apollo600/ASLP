@@ -1,0 +1,74 @@
+2022-07-24 16:39:23 [./nnet/train.py:82 - INFO ] Arguments in command:
+{'batch_size': 16,
+ 'checkpoint': 'exp/3',
+ 'epochs': 50,
+ 'gpus': '0',
+ 'num_workers': 4,
+ 'resume': ''}
+==optimizer_kwargs==: {'lr': 0.001, 'weight_decay': 1e-05}
+training on epoch 1
+training on epoch 2
+training on epoch 3
+training on epoch 4
+training on epoch 5
+training on epoch 6
+training on epoch 7
+training on epoch 8
+training on epoch 9
+training on epoch 10
+training on epoch 11
+training on epoch 12
+training on epoch 13
+training on epoch 14
+training on epoch 15
+training on epoch 16
+training on epoch 17
+training on epoch 18
+training on epoch 19
+training on epoch 20
+training on epoch 21
+training on epoch 22
+training on epoch 23
+training on epoch 24
+training on epoch 25
+Epoch 00025: reducing learning rate of group 0 to 5.0000e-04.
+training on epoch 26
+training on epoch 27
+training on epoch 28
+training on epoch 29
+training on epoch 30
+training on epoch 31
+training on epoch 32
+training on epoch 33
+training on epoch 34
+training on epoch 35
+training on epoch 36
+training on epoch 37
+training on epoch 38
+Epoch 00038: reducing learning rate of group 0 to 2.5000e-04.
+training on epoch 39
+training on epoch 40
+training on epoch 41
+training on epoch 42
+Traceback (most recent call last):
+  File "./nnet/train.py", line 84, in <module>
+    run(args)
+  File "./nnet/train.py", line 48, in run
+    trainer.run(train_loader, dev_loader, num_epochs=args.epochs)
+  File "/root/mxy/HolidayWork_gruc/nnet/libs/trainer.py", line 231, in run
+    tr = self.train(train_loader)
+  File "/root/mxy/HolidayWork_gruc/nnet/libs/trainer.py", line 186, in train
+    for egs in data_loader:
+  File "/root/mxy/HolidayWork_gruc/nnet/libs/dataset.py", line 154, in __iter__
+    batch, chunk_list = self._merge(chunk_list)
+  File "/root/mxy/HolidayWork_gruc/nnet/libs/dataset.py", line 145, in _merge
+    batch = default_collate(chunk_list[s:s + self.batch_size])
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 157, in default_collate
+    return elem_type({key: default_collate([d[key] for d in batch]) for key in elem})
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 157, in <dictcomp>
+    return elem_type({key: default_collate([d[key] for d in batch]) for key in elem})
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 146, in default_collate
+    return default_collate([torch.as_tensor(b) for b in batch])
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/torch/utils/data/_utils/collate.py", line 138, in default_collate
+    return torch.stack(batch, 0, out=out)
+KeyboardInterrupt

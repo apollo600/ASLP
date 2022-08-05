@@ -1,0 +1,28 @@
+2022-07-23 09:59:09 [./nnet/train.py:82 - INFO ] Arguments in command:
+{'batch_size': 16,
+ 'checkpoint': 'exp/0',
+ 'epochs': 50,
+ 'gpus': '0',
+ 'num_workers': 4,
+ 'resume': ''}
+==optimizer_kwargs==: {'lr': 0.001, 'weight_decay': 1e-05}
+training on epoch 1
+training on epoch 2
+training on epoch 3
+training on epoch 4
+training on epoch 5
+training on epoch 6
+training on epoch 7
+training on epoch 8
+Epoch     8: reducing learning rate of group 0 to 5.0000e-04.
+training on epoch 9
+training on epoch 10
+training on epoch 11
+training on epoch 12
+training on epoch 13
+training on epoch 14
+Epoch    14: reducing learning rate of group 0 to 2.5000e-04.
+training on epoch 15
+training on epoch 16
+training on epoch 17
+Epoch    17: reducing learning rate of group 0 to 1.2500e-04.

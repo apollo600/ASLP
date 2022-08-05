@@ -1,0 +1,17 @@
+{
+    "train": {
+        "mix_scp": "data/tr/mix.scp",
+        "ref_scp": [
+            "data/tr/spk1.scp"
+        ],
+        "sample_rate": 16000
+    },
+    "dev": {
+        "mix_scp": "data/cv/mix.scp",
+        "ref_scp": [
+            "data/cv/spk1.scp"
+        ],
+        "sample_rate": 16000
+    },
+    "chunk_size": 64000
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ASLP_DEMO</string>
+    <string name="button">录音开始</string>
+    <string name="button_2">录音结束</string>
+    <string name="button2">原始音频</string>
+    <string name="button3">增强处理</string>
+    <string name="button4">增强播放</string>
+</resources>

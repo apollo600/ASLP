@@ -1,0 +1,30 @@
+2022-07-23 18:13:02 [./nnet/train.py:82 - INFO ] Arguments in command:
+{'batch_size': 16,
+ 'checkpoint': 'exp/2',
+ 'epochs': 50,
+ 'gpus': '0',
+ 'num_workers': 4,
+ 'resume': ''}
+==optimizer_kwargs==: {'lr': 0.001, 'weight_decay': 1e-05}
+inputs: torch.Size([16, 64000])
+error: module 'torch.nn' has no attribute 'conv1d'
+Traceback (most recent call last):
+  File "./nnet/train.py", line 84, in <module>
+    run(args)
+  File "./nnet/train.py", line 48, in run
+    trainer.run(train_loader, dev_loader, num_epochs=args.epochs)
+  File "/home/disk1/user2/mxy/HolidayWork_gruc/nnet/libs/trainer.py", line 218, in run
+    cv = self.eval(dev_loader)
+  File "/home/disk1/user2/mxy/HolidayWork_gruc/nnet/libs/trainer.py", line 208, in eval
+    loss = self.compute_loss(egs)
+  File "/home/disk1/user2/mxy/HolidayWork_gruc/nnet/libs/trainer.py", line 293, in compute_loss
+    self.nnet, egs["mix"], device_ids=self.gpuid)
+  File "/home/user20/anaconda3/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 215, in data_parallel
+    return module(*inputs[0], **module_kwargs[0])
+  File "/home/user20/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/disk1/user2/mxy/HolidayWork_gruc/nnet/net.py", line 40, in forward
+    output = self.decode(mag)
+  File "/home/user20/anaconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 779, in __getattr__
+    type(self).__name__, name))
+torch.nn.modules.module.ModuleAttributeError: 'NET' object has no attribute 'decode'
